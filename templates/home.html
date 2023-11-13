@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block main_content %}
+<section>
+    {% for habit in habits %}
+    <div class="habits_list">
+    <p>
+        {{habit}}
+    </p>
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}
+
