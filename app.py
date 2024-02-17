@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__,template_folder="templates")
-client = MongoClient("mongodb+srv://Shaiful:saiful2206@entry.ay9oa2w.mongodb.net/",tlsCAFile = certifi.where())
+client = MongoClient(os.environ.get("MONGODB_URI"))
 app.db=client.habit_tracker
 
 @app.context_processor
